@@ -9,12 +9,12 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="64.2dp"
-        android:layout_alignParentStart="false"
         android:background="#cccccc"
-        android:layout_alignParentLeft="false"
         android:weightSum="1"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/linearLayout">
+        android:id="@+id/linearLayout"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <ToggleButton
             android:layout_width="wrap_content"
@@ -30,10 +30,11 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:layout_above="@+id/linearLayout2"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:background="#cccccc">
+        android:background="#cccccc"
+        android:id="@+id/linearLayout5"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentLeft="true">
 
         <Space
             android:layout_width="0dp"
@@ -50,7 +51,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:id="@+id/imageButton7"
-            android:src="@mipmap/EjectButton"
+            android:src="@mipmap/ejectbuttonaa"
             android:layout_gravity="bottom" />
 
         <Space
@@ -65,9 +66,9 @@
         android:layout_height="120dp"
         android:id="@+id/linearLayout2"
         android:background="#cccccc"
-        android:layout_above="@+id/linearLayout4"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linearLayout5"
+        android:layout_alignParentLeft="true">
 
         <Space
             android:layout_width="0dp"
@@ -78,7 +79,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:id="@+id/imageButton"
-            android:src="@mipmap/RepeatButton"
+            android:src="@mipmap/repeatbuttonaa"
             android:layout_gravity="bottom" />
 
         <Space
@@ -90,7 +91,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:id="@+id/imageButton5"
-            android:src="@mipmap/PauseButton"
+            android:src="@mipmap/pausebuttonaa"
             android:layout_gravity="bottom" />
 
         <Space
@@ -102,7 +103,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:id="@+id/imageButton2"
-            android:src="@mipmap/NewStopButton"
+            android:src="@mipmap/stopbuttonaa"
             android:layout_gravity="bottom" />
 
         <Space
@@ -114,7 +115,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:id="@+id/imageButton6"
-            android:src="@mipmap/SkipButton"
+            android:src="@mipmap/skipbuttonaa"
             android:layout_gravity="bottom" />
 
         <Space
@@ -128,10 +129,10 @@
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:background="#cccccc"
-        android:layout_above="@+id/linearLayout3"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/linearLayout4">
+        android:id="@+id/linearLayout4"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_alignParentLeft="true">
 
         <TextView
             android:layout_width="wrap_content"
@@ -145,26 +146,76 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:id="@+id/imageButton3"
-            android:src="@mipmap/UpArrowButton"
+            android:src="@mipmap/uparrowbuttonaa"
             android:layout_gravity="bottom" />
 
         <ImageButton
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:id="@+id/imageButton4"
-            android:src="@mipmap/DownArrowButton"
+            android:id="@+id/imagebutton4"
+            android:src="@mipmap/downarrowbuttonaa"
             android:layout_gravity="bottom" />
     </LinearLayout>
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="385dp"
+        android:layout_height="128.3dp"
+        android:layout_below="@+id/linearLayout4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout6"
+        android:background="#b2b2b2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Station: "
+            android:id="@+id/textView"
+            android:textSize="60dp"
+            android:layout_gravity="bottom"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="128.3dp"
+        android:layout_below="@+id/linearLayout6"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#b2b2b2">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/progressBar" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="128.3dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:background="#b2b2b2"
         android:id="@+id/linearLayout3">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="20px"
+            android:layout_weight="1" />
+
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/toggleButton2"
+            android:textOn="AM"
+            android:textOff="FM"
+            android:textSize="60dp" />
 
         <Space
             android:layout_width="0dp"
